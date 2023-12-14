@@ -2,43 +2,17 @@
   display: flex;
   align-items: center;
   list-style: none;
+  counter-reset: movies;
 }
 
 .list-itm {
   display: flex;
   align-items: center;
   font-size: 40px;
-}
-.list-itm:not(:last-child) {
-  margin-right: 10px;
+  counter-increment: movies;
 }
 
-.list-itm:nth-child(1)::before {
- content: "1";
- margin-right: 10px;
+
+.list-itm::before {
+  content: counter(movies);
 }
-
-.list-itm:nth-child(2)::before {
-  content: "2";
-  margin-right: 10px;
- }
-
- .list-itm:nth-child(3)::before {
-  content: "3";
-  margin-right: 10px;
- }
-
- .list-itm:nth-child(4)::before {
-  content: "4";
-  margin-right: 10px;
- }
-
- .list-itm:nth-child(5)::before {
-  content: "5";
-  margin-right: 10px;
- }
-
- .list-itm:nth-child(6)::before {
-  content: "6";
-  margin-right: 10px;
- }
